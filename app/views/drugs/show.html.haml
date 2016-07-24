@@ -1,0 +1,8 @@
+%p Name: #{@drug.name}
+%p Description: #{@drug.description}
+%p Standard Test: #{@drug.standardtest}
+%p Standard Detection Time: #{@drug.standardDetectionTime}
+%p Max Detection Time: #{@drug.maxDetectionTime}
+
+= link_to 'Edit', edit_drug_path(@drug)
+= link_to 'Back', drugs_path

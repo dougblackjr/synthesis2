@@ -1,0 +1,22 @@
+%h1 Drugs
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Standard Test?
+      %th Standard Detection Time
+      %th Max Detection Time
+      %th Actions
+  %tbody
+    - @drugs.each do |drug|
+      %tr
+        %td= drug.name
+        %td= drug.description
+        %td= drug.standardtest
+        %td= drug.standardDetectionTime
+        %td= drug.maxDetectionTime
+        %td #{link_to 'Show', drug}   #{link_to 'Edit', edit_drug_path(drug)}  #{link_to 'Destroy', drug, method: :delete, data: { confirm: 'Are you sure?' } }
+
+= link_to 'New Drug', new_drug_path

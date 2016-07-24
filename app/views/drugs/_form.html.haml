@@ -1,0 +1,10 @@
+= simple_form_for(@drug) do |f|
+  .form-inputs
+    = f.input :name
+    = f.input :description
+    = f.input :standardtest
+    = f.input :standardDetectionTime
+    = f.input :maxDetectionTime
+  
+  .form-actions
+    = f.button :submit
