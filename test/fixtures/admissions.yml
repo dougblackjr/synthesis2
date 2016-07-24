@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  active: false
+  admissionDate: 2016-07-24
+  admissionStatus: MyString
+  bed_id: 
+  blackout: false
+  blackoutDate: 2016-07-24
+  closeDate: 2016-07-24
+  closeReason: MyString
+  locker: MyString
+  module: MyString
+  program_id: 
+  referralSource: MyString
+  referralReason: MyString
+  resident_id: 
+
+two:
+  active: false
+  admissionDate: 2016-07-24
+  admissionStatus: MyString
+  bed_id: 
+  blackout: false
+  blackoutDate: 2016-07-24
+  closeDate: 2016-07-24
+  closeReason: MyString
+  locker: MyString
+  module: MyString
+  program_id: 
+  referralSource: MyString
+  referralReason: MyString
+  resident_id: 

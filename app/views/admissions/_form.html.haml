@@ -1,0 +1,18 @@
+= simple_form_for(@admission) do |f|
+    .form-inputs
+        = f.association :resident, :label_method => :fullname, :value_method => :id
+        = f.input :active
+        = f.input :admissionDate
+        = f.input :admissionStatus
+        = f.association :bed
+        = f.input :blackout
+        = f.input :blackoutDate
+        = f.input :closeDate
+        = f.input :closeReason
+        = f.input :locker
+        = f.input :module
+        = f.association :program
+        = f.input :referralSource
+        = f.input :referralReason
+    .form-actions
+        = f.button :submit

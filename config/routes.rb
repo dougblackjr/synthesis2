@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :admissions
   devise_for :users
   resources :lockers
   resources :programs

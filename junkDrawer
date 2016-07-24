@@ -1,5 +1,3 @@
-USER
-
 ADMISION SCAFFOLD
 rails g scaffold Admission active:boolean admissionDate:date admissionStatus:string bed:references blackout:boolean blackoutDate:date closeDate:date closeReason:string locker:string module:string program:references referralSource:string referralReason:string resident:references
 

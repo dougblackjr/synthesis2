@@ -1,0 +1,42 @@
+%h1 Listing Admissions
+
+%table
+  %thead
+    %tr
+      %th Resident
+      %th Active
+      %th Admissiondate
+      %th Admissionstatus
+      %th Bed
+      %th Blackout
+      %th Blackoutdate
+      %th Closedate
+      %th Closereason
+      %th Locker
+      %th Module
+      %th Program
+      %th Referralsource
+      %th Referralreason
+      %th Actions
+
+  %tbody
+    - @admissions.each do |admission|
+      %tr
+        %td
+          %p #{admission.resident.firstname} #{admission.resident.lastname}
+        %td= admission.active
+        %td= admission.admissionDate
+        %td= admission.admissionStatus
+        %td= admission.bed
+        %td= admission.blackout
+        %td= admission.blackoutDate
+        %td= admission.closeDate
+        %td= admission.closeReason
+        %td= admission.locker
+        %td= admission.module
+        %td= admission.program
+        %td= admission.referralSource
+        %td= admission.referralReason
+        %td #{link_to 'Show', admission} #{link_to 'Edit', edit_admission_path(admission)} #{link_to 'Destroy', admission, method: :delete, data: { confirm: 'Are you sure?' }}
+
+= link_to 'New Admission', new_admission_path

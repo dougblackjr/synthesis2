@@ -10,4 +10,8 @@ class Resident < ActiveRecord::Base
 	def setup_demographic
     	Demographic.create(resident_id: self.id)
 	end
+
+	def fullname
+		"#{firstname} #{lastname}"
+	end
 end

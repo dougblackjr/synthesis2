@@ -1,0 +1,2 @@
+json.extract! admission, :id, :active, :admissionDate, :admissionStatus, :bed_id, :blackout, :blackoutDate, :closeDate, :closeReason, :locker, :module, :program_id, :referralSource, :referralReason, :resident_id, :created_at, :updated_at
+json.url admission_url(admission, format: :json)

@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724155228) do
+ActiveRecord::Schema.define(version: 20160724155705) do
+
+  create_table "admissions", force: :cascade do |t|
+    t.boolean  "active"
+    t.date     "admissionDate"
+    t.string   "admissionStatus"
+    t.integer  "bed_id"
+    t.boolean  "blackout"
+    t.date     "blackoutDate"
+    t.date     "closeDate"
+    t.string   "closeReason"
+    t.string   "locker"
+    t.string   "module"
+    t.integer  "program_id"
+    t.string   "referralSource"
+    t.string   "referralReason"
+    t.integer  "resident_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "admissions", ["bed_id"], name: "index_admissions_on_bed_id"
+  add_index "admissions", ["program_id"], name: "index_admissions_on_program_id"
+  add_index "admissions", ["resident_id"], name: "index_admissions_on_resident_id"
 
   create_table "beds", force: :cascade do |t|
     t.integer  "bedNumber"

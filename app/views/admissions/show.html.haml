@@ -1,0 +1,17 @@
+%p Resident: #{@admission.resident}
+%p Active: #{@admission.active}
+%p Admissiondate: #{@admission.admissionDate}
+%p Admissionstatus: #{@admission.admissionStatus}
+%p Bed: #{@admission.bed}
+%p Blackout: #{@admission.blackout}
+%p Blackoutdate: #{@admission.blackoutDate}
+%p Closedate: #{@admission.closeDate}
+%p Closereason: #{@admission.closeReason}
+%p Locker: #{@admission.locker}
+%p Module: #{@admission.module}
+%p Program: #{@admission.program}
+%p Referralsource: #{@admission.referralSource}
+%p Referralreason: #{@admission.referralReason}
+
+= link_to 'Edit', edit_admission_path(@admission)
+= link_to 'Back', admissions_path
