@@ -6,6 +6,7 @@ class Resident < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
 
   has_many :demographics
+  has_many :admissions
 
 	def setup_demographic
     	Demographic.create(resident_id: self.id)

@@ -1,20 +1,5 @@
-ADMISION SCAFFOLD
-rails g scaffold Admission active:boolean admissionDate:date admissionStatus:string bed:references blackout:boolean blackoutDate:date closeDate:date closeReason:string locker:string module:string program:references referralSource:string referralReason:string resident:references
-
-
-
-===============
-    t.string   "firstname"
-    t.string   "lastname"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.date     "dob"
-    t.string   "ssn"
-    t.string   "picture"
-    t.boolean  "has_active_admission"
-    t.boolean  "restricted"
-    t.integer  "place"
-
+Admission Status
+Initial Contact
 
 ===============
 THE ADMISSION

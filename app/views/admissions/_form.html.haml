@@ -4,7 +4,7 @@
         = f.input :active
         = f.input :admissionDate
         = f.input :admissionStatus
-        = f.association :bed
+        = f.association :bed, :label_method => :bedfullname, :value_method => :id
         = f.input :blackout
         = f.input :blackoutDate
         = f.input :closeDate
