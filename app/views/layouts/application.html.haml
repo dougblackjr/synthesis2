@@ -1,0 +1,26 @@
+!!!
+%html
+%head
+	%title synthesis
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+	= stylesheet_link_tag    'application', '//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css'
+	= stylesheet_link_tag    'application', '//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css'
+	= csrf_meta_tags
+
+%body
+= render 'layouts/navbar'
+
+.container
+	- unless notice.nil?
+		%p.notice= notice
+	- unless alert.nil?
+		%p.alert= alert
+	= yield
+
+
+%footer.footer.navbar-fixed-bottom
+	%p Synthesis ~ Mission Management software (by Doug Black)
+
+%script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js")

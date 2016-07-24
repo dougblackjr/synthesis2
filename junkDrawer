@@ -21,13 +21,14 @@ place:references
 
 rails g scaffold Resident firstname:string lastname:string dob:date ssn:string picture:string has_active_admission:boolean restricted:boolean place:references
 
-
 DRUG SCAFFOLD
 name:string
 description:string
 standardtest:boolean
 standardDetectionTime:integer
 maxDetectionTime:integer
+
+rails g scaffold Drug name:string description:string standardtest:boolean standardDetectionTime:integer maxDetectionTime:integer
 
 DEMOGRAPHIC SCAFFOLD
 resident:references
@@ -59,6 +60,8 @@ PROGRAM SCAFFOLD
 name:string
 place:references
 programType:string
+
+rails g scaffold Program name:string place:references programType:string
 
 BED SCAFFOLD
 bedNumber:integer
@@ -154,3 +157,19 @@ end
 ==================
 DEMO IN RES
 =render @resident.demographics(@resident)
+
+==================
+            %li
+              %a{:href => programs_path} Programs
+            %li
+              %a{:href => beds_path} Beds
+            %li
+              %a{:href => lockers_path} Lockers
+      - if user_signed_in?
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Account", edit_user_registration_path
+          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+      - else
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Sign Up", new_user_registration_path
+          %li= link_to "Sign In", new_user_session_path
