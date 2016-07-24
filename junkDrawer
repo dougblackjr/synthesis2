@@ -1,0 +1,52 @@
+RESIDENT SCAFFOLD
+
+DEMOGRAPHIC SCAFFOLD
+
+PLACE SCAFFOLD
+
+PROGRAM SCAFFOLD
+
+ADMISION SCAFFOLD
+rails g scaffold Admission active:boolean admissionDate:date admissionStatus:string bed:references blackout:boolean blackoutDate:date closeDate:date closeReason:string locker:string module:string program:references referralSource:string referralReason:string resident:references
+
+SWITCH TO POSTGRE!
+
+
+===============
+DROPDOWN DIVIDERS
+%li.divider{:role => "separator"}
+            %li
+              %a{:href => "#"} Separated link
+            %li.divider{:role => "separator"}
+            %li
+              %a{:href => "#"} One more separated link
+
+SEARCH NAV BAR
+      %form.navbar-form.navbar-left{:role => "search"}
+        .form-group
+          %input.form-control{:placeholder => "Search", :type => "text"}/
+        %button.btn.btn-default{:type => "submit"} Submit
+
+
+===============
+THE ADMISSION
+
+active:boolean
+admissionDate:date
+admissionStatus:string
+bed:references
+blackout:boolean
+blackoutDate:date
+closeDate:date
+closeReason:string
+locker:string
+module:string
+program:references
+referralSource:string
+referralReason:string
+resident:references
+
+===================
+THE USER
+dougblackjr@gmail.com
+h
