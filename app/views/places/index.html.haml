@@ -1,0 +1,26 @@
+%h1 Places
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th City
+      %th State
+      %th Country
+      %th Zip
+      %th Phone
+      %th Actions
+  %tbody
+    - @places.each do |place|
+      %tr
+        %td= place.name
+        %td= place.address
+        %td= place.city
+        %td= place.state
+        %td= place.country
+        %td= place.zip
+        %td= place.phone
+        %td #{link_to 'Show', place}   #{link_to 'Edit', edit_place_path(place)}   #{link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } }
+
+= link_to 'New Place', new_place_path

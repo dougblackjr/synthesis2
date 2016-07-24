@@ -1,0 +1,10 @@
+%p Name: #{@place.name}
+%p Address: #{@place.address}
+%p City: #{@place.city}
+%p State: #{@place.state}
+%p Country: #{@place.country}
+%p Zip: #{@place.zip}
+%p Phone: #{@place.phone}
+
+= link_to 'Edit', edit_place_path(@place)
+= link_to 'Back', places_path

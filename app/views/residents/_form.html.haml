@@ -1,0 +1,11 @@
+= simple_form_for(@resident) do |f|
+  .form-inputs
+    = f.input :firstname
+    = f.input :lastname
+    = f.input :dob, :start_year=>1900
+    = f.input :ssn
+    = f.file_field :picture
+    = f.association :place
+
+  .form-actions
+    = f.button :submit

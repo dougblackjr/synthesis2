@@ -7,6 +7,8 @@ country:string
 zip:string
 phone:string
 
+rails g scaffold Place name:string address:string city:string state:string country:string zip:string phone:string
+
 RESIDENT SCAFFOLD
 firstname:string
 lastname:string
@@ -16,6 +18,9 @@ picture:string
 has_active_admission:boolean
 restricted:boolean
 place:references
+
+rails g scaffold Resident firstname:string lastname:string dob:date ssn:string picture:string has_active_admission:boolean restricted:boolean place:references
+
 
 DRUG SCAFFOLD
 name:string
@@ -144,3 +149,8 @@ group :development do
 
   gem 'spring'
 end
+
+
+==================
+DEMO IN RES
+=render @resident.demographics(@resident)

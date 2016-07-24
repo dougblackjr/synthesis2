@@ -1,0 +1,13 @@
+%h1 Residents #{link_to "Create New Resident", new_resident_path, { :style => 'font-size: 12px' }}
+.wrapper
+  #residents.clearfix
+    -@residents.each do |resident|
+      %a{ href: (url_for [resident])}
+        .resident
+          %h3 #{resident.firstname} #{resident.lastname}
+          %p #{resident.dob} (#{age(resident.dob)} years old)
+          = image_tag(resident.picture_url, :width => 100) if resident.picture.present?
+          -if resident.has_active_admission
+            = image_tag("active.jpg", :width => 50)
+          -if resident.restricted
+            = image_tag("restricted.jpg", :width => 50)
