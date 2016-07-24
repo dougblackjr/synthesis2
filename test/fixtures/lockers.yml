@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lockerNumber: 1
+  lockerCombo: MyString
+  inUse: false
+  resident_id: 
+  lockerNotes: MyString
+
+two:
+  lockerNumber: 1
+  lockerCombo: MyString
+  inUse: false
+  resident_id: 
+  lockerNotes: MyString

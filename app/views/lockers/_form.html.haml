@@ -1,0 +1,9 @@
+= simple_form_for(@locker) do |f|
+  .form-inputs
+    = f.input :lockerNumber
+    = f.input :lockerCombo
+    = f.input :inUse
+    = f.association :resident
+    = f.input :lockerNotes
+  .form-actions
+    = f.button :submit

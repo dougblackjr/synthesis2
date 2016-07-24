@@ -1,0 +1,8 @@
+%p Bednumber: #{@bed.bedNumber}
+%p Place: #{@bed.place}
+%p Bedlocation: #{@bed.bedLocation}
+%p Occupied: #{@bed.occupied}
+%p Resident: #{@bed.resident}
+%p Bednotes: #{@bed.bedNotes}
+= link_to 'Edit', edit_bed_path(@bed)
+= link_to 'Back', beds_path

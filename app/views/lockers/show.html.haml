@@ -1,0 +1,8 @@
+%p Lockernumber: #{@locker.lockerNumber}
+%p Lockercombo: #{@locker.lockerCombo}
+%p In Use: #{@locker.inUse}
+%p Resident: #{@locker.resident}
+%p Lockernotes: #{@locker.lockerNotes}
+
+= link_to 'Edit', edit_locker_path(@locker)
+= link_to 'Back', lockers_path

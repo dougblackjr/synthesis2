@@ -1,0 +1,10 @@
+= simple_form_for(@bed) do |f|
+  .form-inputs
+    = f.input :bedNumber
+    = f.association :place
+    = f.input :bedLocation
+    = f.input :occupied
+    = f.association :resident
+    = f.input :bedNotes
+  .form-actions
+    = f.button :submit

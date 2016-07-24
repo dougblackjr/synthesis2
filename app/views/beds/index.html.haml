@@ -1,0 +1,24 @@
+%h1 Beds
+
+%table
+  %thead
+    %tr
+      %th Bed Number
+      %th Place
+      %th Bed Location
+      %th Occupied
+      %th Resident
+      %th Bednotes
+      %th Actions
+  .tbody
+    - @beds.each do |bed|
+      %tr
+        %td= bed.bedNumber
+        %td= bed.place
+        %td= bed.bedLocation
+        %td= bed.occupied
+        %td= bed.resident
+        %td= bed.bedNotes
+        %td #{link_to 'Show', bed} #{link_to 'Edit', edit_bed_path(bed)} #{link_to 'Destroy', bed, method: :delete, data: { confirm: 'Are you sure?' }}
+
+= link_to 'New Bed', new_bed_path

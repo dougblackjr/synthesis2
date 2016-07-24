@@ -1,0 +1,19 @@
+%h1 Programs
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Place
+      %th Type
+      %th Actions
+
+  %tbody
+    - @programs.each do |program|
+      %tr
+        %td= program.name
+        %td= program.place.name
+        %td= program.programType
+        %td #{link_to 'Show', program} #{link_to 'Edit', edit_program_path(program)} #{link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' }}
+
+= link_to 'New Program', new_program_path

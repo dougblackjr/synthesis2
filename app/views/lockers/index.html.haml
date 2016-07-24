@@ -1,0 +1,23 @@
+%h1 Lockers
+
+%table
+  %thead
+    %tr
+      %th Locker Number
+      %th Locker Combo
+      %th In Use
+      %th Resident
+      %th Notes
+      %th Actions
+
+  %tbody
+    - @lockers.each do |locker|
+      %tr
+        %td= locker.lockerNumber
+        %td= locker.lockerCombo
+        %td= locker.inUse
+        %td= locker.resident.firstname
+        %td= locker.lockerNotes
+        %td= #{link_to 'Show', locker} #{link_to 'Edit', edit_locker_path(locker)} #{link_to 'Destroy', locker, method: :delete, data: { confirm: 'Are you sure?' }}
+
+= link_to 'New Locker', new_locker_path

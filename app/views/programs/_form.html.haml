@@ -1,0 +1,7 @@
+= simple_form_for(@program) do |f|
+	.form-inputs
+		= f.input :name
+		= f.association :place
+		=f.input :programType, :collection => ['Shelter - Male', 'Recovery', 'Alumni', 'Shelter - Female']
+	.form-actions
+		= f.button :submit

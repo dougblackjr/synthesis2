@@ -160,10 +160,6 @@ DEMO IN RES
 
 ==================
             %li
-              %a{:href => programs_path} Programs
-            %li
-              %a{:href => beds_path} Beds
-            %li
               %a{:href => lockers_path} Lockers
       - if user_signed_in?
         %ul.nav.navbar-nav.navbar-right

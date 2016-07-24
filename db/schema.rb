@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724140934) do
+ActiveRecord::Schema.define(version: 20160724154325) do
+
+  create_table "beds", force: :cascade do |t|
+    t.integer  "bedNumber"
+    t.integer  "place_id"
+    t.string   "bedLocation"
+    t.boolean  "occupied"
+    t.integer  "resident_id"
+    t.string   "bedNotes"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "beds", ["place_id"], name: "index_beds_on_place_id"
+  add_index "beds", ["resident_id"], name: "index_beds_on_resident_id"
 
   create_table "demographics", force: :cascade do |t|
     t.integer  "resident_id"
@@ -55,6 +69,18 @@ ActiveRecord::Schema.define(version: 20160724140934) do
     t.datetime "updated_at",            null: false
   end
 
+  create_table "lockers", force: :cascade do |t|
+    t.integer  "lockerNumber"
+    t.string   "lockerCombo"
+    t.boolean  "inUse"
+    t.integer  "resident_id"
+    t.string   "lockerNotes"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "lockers", ["resident_id"], name: "index_lockers_on_resident_id"
+
   create_table "places", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
@@ -66,6 +92,16 @@ ActiveRecord::Schema.define(version: 20160724140934) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "programs", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "place_id"
+    t.string   "programType"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "programs", ["place_id"], name: "index_programs_on_place_id"
 
   create_table "residents", force: :cascade do |t|
     t.string   "firstname"
