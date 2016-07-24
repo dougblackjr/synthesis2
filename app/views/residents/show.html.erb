@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @resident.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @resident.lastname %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @resident.dob %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @resident.ssn %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @resident.picture %>
+</p>
+
+<p>
+  <strong>Has active admission:</strong>
+  <%= @resident.has_active_admission %>
+</p>
+
+<p>
+  <strong>Restricted:</strong>
+  <%= @resident.restricted %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @resident.place %>
+</p>
+
+<%= link_to 'Edit', edit_resident_path(@resident) %> |
+<%= link_to 'Back', residents_path %>

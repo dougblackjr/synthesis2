@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Residents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Dob</th>
+      <th>Ssn</th>
+      <th>Picture</th>
+      <th>Has active admission</th>
+      <th>Restricted</th>
+      <th>Place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @residents.each do |resident| %>
+      <tr>
+        <td><%= resident.firstname %></td>
+        <td><%= resident.lastname %></td>
+        <td><%= resident.dob %></td>
+        <td><%= resident.ssn %></td>
+        <td><%= resident.picture %></td>
+        <td><%= resident.has_active_admission %></td>
+        <td><%= resident.restricted %></td>
+        <td><%= resident.place %></td>
+        <td><%= link_to 'Show', resident %></td>
+        <td><%= link_to 'Edit', edit_resident_path(resident) %></td>
+        <td><%= link_to 'Destroy', resident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resident', new_resident_path %>

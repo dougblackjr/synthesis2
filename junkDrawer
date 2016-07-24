@@ -1,31 +1,92 @@
+PLACE SCAFFOLD
+name:string
+address:string
+city:string
+state:string
+country:string
+zip:string
+phone:string
+
 RESIDENT SCAFFOLD
+firstname:string
+lastname:string
+dob:date
+ssn:string
+picture:string
+has_active_admission:boolean
+restricted:boolean
+place:references
+
+DRUG SCAFFOLD
+name:string
+description:string
+standardtest:boolean
+standardDetectionTime:integer
+maxDetectionTime:integer
 
 DEMOGRAPHIC SCAFFOLD
-
-PLACE SCAFFOLD
+resident:references
+address:string
+city:string
+zip:string
+state:string
+phoneNumber:string
+gender:string
+race:string
+ethnicity:string
+aliases:string
+veteranStatus:string
+primaryLanguag:stringe
+otherLanguagesSpoken:string
+maritalStatus:string
+nameOfSignificantOther:string
+listOfChildren:string
+drug:references
+drugsUsed:string
+descriptionOfLastUse:string
+dateOfLastUse:date
+incomeAmount:float
+incomeDescription:string
+probationParole:string
+socialWorker:string
 
 PROGRAM SCAFFOLD
+name:string
+place:references
+programType:string
+
+BED SCAFFOLD
+bedNumber:integer
+place:references
+bedLocation:string
+occupied:boolean
+resident:references
+bedNotes:string
+
+LOCKER SCAFFOLD
+lockerNumber:integer
+lockerCombo:string
+inUse:boolean
+lockerNotes:string
+
+USER
 
 ADMISION SCAFFOLD
 rails g scaffold Admission active:boolean admissionDate:date admissionStatus:string bed:references blackout:boolean blackoutDate:date closeDate:date closeReason:string locker:string module:string program:references referralSource:string referralReason:string resident:references
 
-SWITCH TO POSTGRE!
 
 
 ===============
-DROPDOWN DIVIDERS
-%li.divider{:role => "separator"}
-            %li
-              %a{:href => "#"} Separated link
-            %li.divider{:role => "separator"}
-            %li
-              %a{:href => "#"} One more separated link
-
-SEARCH NAV BAR
-      %form.navbar-form.navbar-left{:role => "search"}
-        .form-group
-          %input.form-control{:placeholder => "Search", :type => "text"}/
-        %button.btn.btn-default{:type => "submit"} Submit
+    t.string   "firstname"
+    t.string   "lastname"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.date     "dob"
+    t.string   "ssn"
+    t.string   "picture"
+    t.boolean  "has_active_admission"
+    t.boolean  "restricted"
+    t.integer  "place"
 
 
 ===============
@@ -50,3 +111,36 @@ resident:references
 THE USER
 dougblackjr@gmail.com
 h
+
+source 'https://rubygems.org'
+
+
+gem 'rails', '4.2.6'
+gem 'sqlite3'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
+gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'haml'
+gem 'better_errors'
+gem 'devise'
+gem 'paperclip'
+gem 'simple_form'
+gem 'carrierwave'
+gem 'bootstrap-sass'
+gem 'bootstrap'
+gem 'pg'
+
+group :development, :test do
+  gem 'byebug'
+end
+
+group :development do
+  gem 'web-console', '~> 2.0'
+
+  gem 'spring'
+end

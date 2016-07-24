@@ -11,6 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160724113416) do
+
+  create_table "places", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "zip"
+    t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "residents", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.date     "dob"
+    t.string   "ssn"
+    t.string   "picture"
+    t.boolean  "has_active_admission"
+    t.boolean  "restricted"
+    t.integer  "place_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "residents", ["place_id"], name: "index_residents_on_place_id"
 
 end

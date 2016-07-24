@@ -1,0 +1,18 @@
+<%= simple_form_for(@resident) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :firstname %>
+    <%= f.input :lastname %>
+    <%= f.input :dob %>
+    <%= f.input :ssn %>
+    <%= f.input :picture %>
+    <%= f.input :has_active_admission %>
+    <%= f.input :restricted %>
+    <%= f.association :place %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
