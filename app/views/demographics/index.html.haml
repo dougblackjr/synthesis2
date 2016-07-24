@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Demographics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resident</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>State</th>
+      <th>Phonenumber</th>
+      <th>Gender</th>
+      <th>Race</th>
+      <th>Ethnicity</th>
+      <th>Aliases</th>
+      <th>Veteranstatus</th>
+      <th>Primarylanguage</th>
+      <th>Otherlanguagesspoken</th>
+      <th>Maritalstatus</th>
+      <th>Nameofsignificantother</th>
+      <th>Listofchildren</th>
+      <th>Drug</th>
+      <th>Drugsused</th>
+      <th>Descriptionoflastuse</th>
+      <th>Dateoflastuse</th>
+      <th>Incomeamount</th>
+      <th>Incomedescription</th>
+      <th>Probationparole</th>
+      <th>Socialworker</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demographics.each do |demographic| %>
+      <tr>
+        <td><%= demographic.resident %></td>
+        <td><%= demographic.address %></td>
+        <td><%= demographic.city %></td>
+        <td><%= demographic.zip %></td>
+        <td><%= demographic.state %></td>
+        <td><%= demographic.phoneNumber %></td>
+        <td><%= demographic.gender %></td>
+        <td><%= demographic.race %></td>
+        <td><%= demographic.ethnicity %></td>
+        <td><%= demographic.aliases %></td>
+        <td><%= demographic.veteranStatus %></td>
+        <td><%= demographic.primaryLanguage %></td>
+        <td><%= demographic.otherLanguagesSpoken %></td>
+        <td><%= demographic.maritalStatus %></td>
+        <td><%= demographic.nameOfSignificantOther %></td>
+        <td><%= demographic.listOfChildren %></td>
+        <td><%= demographic.drug %></td>
+        <td><%= demographic.drugsUsed %></td>
+        <td><%= demographic.descriptionOfLastUse %></td>
+        <td><%= demographic.dateOfLastUse %></td>
+        <td><%= demographic.incomeAmount %></td>
+        <td><%= demographic.incomeDescription %></td>
+        <td><%= demographic.probationParole %></td>
+        <td><%= demographic.socialWorker %></td>
+        <td><%= link_to 'Show', demographic %></td>
+        <td><%= link_to 'Edit', edit_demographic_path(demographic) %></td>
+        <td><%= link_to 'Destroy', demographic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demographic', new_demographic_path %>

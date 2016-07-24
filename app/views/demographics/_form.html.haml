@@ -1,0 +1,28 @@
+= simple_form_for(@demographic) do |f|
+    .form-inputs
+        =f.association :resident
+        =f.input :address
+        =f.input :city
+        =f.input :state
+        =f.input :zip
+        =f.input :phoneNumber
+        =f.input :gender, :collection => ['Male','Female']
+        =f.input :race, :collection => ['White','Black','Native American','Asian/Pacific Islander','Other','Unknown']
+        =f.input :ethnicity, :collection => ['Hispanic','Non-Hispanic','Unknown']
+        =f.input :aliases
+        =f.input :veteranStatus, :collection => ['Protected Veteran: Disabled veteran','Protected Veteran: Recently separated veteran','Protected Veteran: Active wartime or campaign badge veteran','Protected Veteran: Armed forces service medal veteran','Not A Protected Veteran','Not A Veteran']
+        =f.input :primaryLanguage
+        =f.input :otherLanguagesSpoken
+        =f.input :maritalStatus, :collection => ['Single','Married','Separated','Divorced','Widowed','Other']
+        =f.input :nameOfSignificantOther
+        =f.input :listOfChildren
+        = f.association :drug
+        =f.input :drugsUsed
+        =f.input :descriptionOfLastUse
+        =f.input :dateOfLastUse
+        =f.input :incomeAmount
+        =f.input :incomeDescription
+        =f.input :probationParole
+        =f.input :socialWorker
+    .form-actions
+        =f.button :submit

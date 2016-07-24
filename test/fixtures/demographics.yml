@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  resident_id: 
+  address: MyString
+  city: MyString
+  zip: MyString
+  state: MyString
+  phoneNumber: MyString
+  gender: MyString
+  race: MyString
+  ethnicity: MyString
+  aliases: MyString
+  veteranStatus: MyString
+  primaryLanguage: MyString
+  otherLanguagesSpoken: MyString
+  maritalStatus: MyString
+  nameOfSignificantOther: MyString
+  listOfChildren: MyString
+  drug_id: 
+  drugsUsed: MyString
+  descriptionOfLastUse: MyString
+  dateOfLastUse: 2016-07-24
+  incomeAmount: 1.5
+  incomeDescription: MyString
+  probationParole: MyString
+  socialWorker: MyString
+
+two:
+  resident_id: 
+  address: MyString
+  city: MyString
+  zip: MyString
+  state: MyString
+  phoneNumber: MyString
+  gender: MyString
+  race: MyString
+  ethnicity: MyString
+  aliases: MyString
+  veteranStatus: MyString
+  primaryLanguage: MyString
+  otherLanguagesSpoken: MyString
+  maritalStatus: MyString
+  nameOfSignificantOther: MyString
+  listOfChildren: MyString
+  drug_id: 
+  drugsUsed: MyString
+  descriptionOfLastUse: MyString
+  dateOfLastUse: 2016-07-24
+  incomeAmount: 1.5
+  incomeDescription: MyString
+  probationParole: MyString
+  socialWorker: MyString

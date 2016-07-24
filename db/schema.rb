@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724135116) do
+ActiveRecord::Schema.define(version: 20160724140934) do
+
+  create_table "demographics", force: :cascade do |t|
+    t.integer  "resident_id"
+    t.string   "address"
+    t.string   "city"
+    t.string   "zip"
+    t.string   "state"
+    t.string   "phoneNumber"
+    t.string   "gender"
+    t.string   "race"
+    t.string   "ethnicity"
+    t.string   "aliases"
+    t.string   "veteranStatus"
+    t.string   "primaryLanguage"
+    t.string   "otherLanguagesSpoken"
+    t.string   "maritalStatus"
+    t.string   "nameOfSignificantOther"
+    t.string   "listOfChildren"
+    t.integer  "drug_id"
+    t.string   "drugsUsed"
+    t.string   "descriptionOfLastUse"
+    t.date     "dateOfLastUse"
+    t.float    "incomeAmount"
+    t.string   "incomeDescription"
+    t.string   "probationParole"
+    t.string   "socialWorker"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "demographics", ["drug_id"], name: "index_demographics_on_drug_id"
+  add_index "demographics", ["resident_id"], name: "index_demographics_on_resident_id"
 
   create_table "drugs", force: :cascade do |t|
     t.string   "name"

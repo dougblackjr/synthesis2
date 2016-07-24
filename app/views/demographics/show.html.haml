@@ -1,0 +1,25 @@
+%p Address: #{@demographic.address}
+%p City: #{@demographic.city}
+%p Zip: #{@demographic.zip}
+%p State: #{@demographic.state}
+%p Phonenumber: #{@demographic.phoneNumber}
+%p Gender: #{@demographic.gender}
+%p Race: #{@demographic.race}
+%p Ethnicity: #{@demographic.ethnicity}
+%p Aliases: #{@demographic.aliases}
+%p Veteranstatus: #{@demographic.veteranStatus}
+%p Primarylanguage: #{@demographic.primaryLanguage}
+%p Otherlanguagesspoken: #{@demographic.otherLanguagesSpoken}
+%p Maritalstatus: #{@demographic.maritalStatus}
+%p Nameofsignificantother: #{@demographic.nameOfSignificantOther}
+%p Listofchildren: #{@demographic.listOfChildren}
+%p Drug of choice: #{@demographic.drug}
+%p Drugsused: #{@demographic.drugsUsed}
+%p Descriptionoflastuse: #{@demographic.descriptionOfLastUse}
+%p Dateoflastuse: #{@demographic.dateOfLastUse}
+%p Incomeamount: #{@demographic.incomeAmount}
+%p Incomedescription: #{@demographic.incomeDescription}
+%p Probationparole: #{@demographic.probationParole}
+%p Socialworker: #{@demographic.socialWorker}
+= link_to 'Edit', edit_demographic_path(@demographic)
+= link_to 'Back', resident_path(@demographic.resident)

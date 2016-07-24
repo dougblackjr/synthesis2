@@ -1,0 +1,2 @@
+json.extract! demographic, :id, :resident_id, :address, :city, :zip, :state, :phoneNumber, :gender, :race, :ethnicity, :aliases, :veteranStatus, :primaryLanguage, :otherLanguagesSpoken, :maritalStatus, :nameOfSignificantOther, :listOfChildren, :drug_id, :drugsUsed, :descriptionOfLastUse, :dateOfLastUse, :incomeAmount, :incomeDescription, :probationParole, :socialWorker, :created_at, :updated_at
+json.url demographic_url(demographic, format: :json)
