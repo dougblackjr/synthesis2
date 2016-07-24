@@ -1,0 +1,10 @@
+%p Phone: #{demographic.phoneNumber}
+%p Race: #{demographic.race}
+%p Drug of Choice: #{demographic.drug.name}
+%p Drugs Used: #{demographic.drugsUsed}
+%p Income: #{demographic.incomeAmount} via #{demographic.incomeDescription}
+%p Probation/Parole: #{demographic.probationParole}
+%p Social Worker/Case Worker: #{demographic.socialWorker}
+
+= link_to 'Show All', demographic_path(demographic.id)
+= link_to 'Edit', edit_demographic_path(demographic.id)

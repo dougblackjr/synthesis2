@@ -24,5 +24,6 @@
         .tab-content
           #demographic.tab-pane.active
             %p DOB: #{@resident.dob} (#{age(@resident.dob)} years old)
+            =render @resident.demographics(@resident)
           #admission.tab-pane 2
           #messages.tab-pane 3
