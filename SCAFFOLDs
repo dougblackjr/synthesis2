@@ -1,0 +1,80 @@
+SCAFFOLDs
+
+PLACE SCAFFOLD
+name:string
+address:string
+city:string
+state:string
+country:string
+zip:string
+phone:string
+
+rails g scaffold Place name:string address:string city:string state:string country:string zip:string phone:string
+
+RESIDENT SCAFFOLD
+firstname:string
+lastname:string
+dob:date
+ssn:string
+picture:string
+has_active_admission:boolean
+restricted:boolean
+place:references
+
+rails g scaffold Resident firstname:string lastname:string dob:date ssn:string picture:string has_active_admission:boolean restricted:boolean place:references
+
+DRUG SCAFFOLD
+name:string
+description:string
+standardtest:boolean
+standardDetectionTime:integer
+maxDetectionTime:integer
+
+rails g scaffold Drug name:string description:string standardtest:boolean standardDetectionTime:integer maxDetectionTime:integer
+
+DEMOGRAPHIC SCAFFOLD
+resident:references
+address:string
+city:string
+zip:string
+state:string
+phoneNumber:string
+gender:string
+race:string
+ethnicity:string
+aliases:string
+veteranStatus:string
+primaryLanguag:stringe
+otherLanguagesSpoken:string
+maritalStatus:string
+nameOfSignificantOther:string
+listOfChildren:string
+drug:references
+drugsUsed:string
+descriptionOfLastUse:string
+dateOfLastUse:date
+incomeAmount:float
+incomeDescription:string
+probationParole:string
+socialWorker:string
+
+PROGRAM SCAFFOLD
+name:string
+place:references
+programType:string
+
+rails g scaffold Program name:string place:references programType:string
+
+BED SCAFFOLD
+bedNumber:integer
+place:references
+bedLocation:string
+occupied:boolean
+resident:references
+bedNotes:string
+
+LOCKER SCAFFOLD
+lockerNumber:integer
+lockerCombo:string
+inUse:boolean
+lockerNotes:string
