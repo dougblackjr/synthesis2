@@ -1,6 +1,14 @@
-- admissions.each do |admission|
-	%p Program: #{admission.program}
-	%p Active: #{admission.active} Blackout: #{admission.blackout}
-	%p Admission Date: #{admission.admissionDate}
-	%p Bed: #{admission.bed.bedLocation} #{admission.bed.bedNumber}
-	%p Closedate: #{admission.closeDate} ~ #{admission.closeReason}
+- Admission.where(["resident_id = :u", { u: @resident }]).each do |admission|
+	-if admission.active
+		= image_tag("active.jpg", :width => 100)
+	-if admission.blackout
+		= image_tag("blackout.png", :width => 100)
+	%p Program: #{admission.program.name}
+	-if admission.active
+		%p Admission Date: #{admission.admissionDate}
+		%p Days In Program: #{daysinprogram(admission.admissionDate,Date.today)}
+		%p Bed: #{admission.bed.bedLocation} #{admission.bed.bedNumber}
+	- else
+		%p Admission Date: #{admission.admissionDate}
+		%p Closedate: #{admission.closeDate} ~ #{admission.closeReason}
+		%p Days In Program: #{daysinprogram(admission.admissionDate,admission.closeDate)}

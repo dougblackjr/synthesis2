@@ -27,4 +27,6 @@
             =render @resident.demographics(@resident)
           #admission.tab-pane
             =render 'layouts/admission'
+            /- @admissions.each do |admission|
+            /- Admission.find(:resident, @resident).each do
           #messages.tab-pane 3
